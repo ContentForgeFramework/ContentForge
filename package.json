@@ -50,6 +50,65 @@
                 "dependencies" : null,
                 "dev-dependencies" : null
             }
+        },
+        "3dsmax": {
+            "2.7.6" : {
+                "version" : [
+                    "^2017"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "2.7.12" : {
+                "version" : [
+                    ">=2018",
+                    "<=2019"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "2.7.15": {
+                "version" : [
+                    "^2020"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "3.7.6": {
+                "version" : [
+                    "^2021"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "3.7.9": {
+                "version" : [
+                    "^2022"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "3.7.12": {
+                "version" : [
+                    "^2023"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "3.10.8": {
+                "version" : [
+                    "^2024"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            },
+            "3.11.8": {
+                "version" : [
+                    "^2025"
+                ],
+                "dependencies" : null,
+                "dev-dependencies" : null
+            }
         }
     }
 }
