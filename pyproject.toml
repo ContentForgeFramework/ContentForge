@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "contentforge"
+version = "0.1.0"
+description = "The ContentForge framework is for developing plugins and tools for digital content creation software."
+authors = ["contentforge <contentforge@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.13"
+
+[tool.poetry.group.dev.dependencies]
+click = "^8.1.7"
+pytest = "^8.3.4"
+black = "^24.10.0"
+PyYAML = "^6.0.2"
+toml = "^0.10.2"
+tomli = "^2.2.1"
+
+[tool.poetry.group.ui.dependencies]
+PySide6 = "^6.8.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
