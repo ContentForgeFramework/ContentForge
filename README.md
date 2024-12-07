@@ -28,6 +28,21 @@ ensuring seamless integration and enhanced productivity.
 | preview     | ![Build status](https://img.shields.io/badge/Build-N/A-lightgray)       |
 | development | ![Build status](https://img.shields.io/badge/Build-NotStarted-orange)   |
 
+| DCC Application          | support version                                                                                                                     | Status                                                            |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| Autodesk Maya            | ![Build status](https://img.shields.io/badge/VERSION-^2017-Green)                                                                   | ![Build status](https://img.shields.io/badge/Support-Yes-Green)   |
+| Autodesk 3ds Max         | ![Build status](https://img.shields.io/badge/VERSION-^2017-Green)                                                                   | ![Build status](https://img.shields.io/badge/Support-Yes-Green)   |
+| ZBrush                   | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-No-99302a)   |
+| Photoshop                | ![Build status](https://img.shields.io/badge/VERSION-CS6-Green) ![Build status](https://img.shields.io/badge/VERSION-^CC2017-Green) | ![Build status](https://img.shields.io/badge/Support-Plan-orange) |
+| Adobe Substance painter  | ![Build status](https://img.shields.io/badge/VERSION-^6.1-yellow)                                                                   | ![Build status](https://img.shields.io/badge/Support-Plan-orange) |
+| Adobe Substance Designer | ![Build status](https://img.shields.io/badge/VERSION-^9.1-yellow)                                                                   | ![Build status](https://img.shields.io/badge/Support-Plan-orange) |
+| Blender                  | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-No-99302a)   |
+| Houdini                  | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-No-99302a)   |
+| Marmoset Toolbag         | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-No-99302a)   |
+| Unity                    | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-Plan-orange) |
+| Unreal Engine 4          | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-No-99302a)   |
+| Unreal Engine 5          | ![Build status](https://img.shields.io/badge/VERSION-N/A-99302a)                                                                    | ![Build status](https://img.shields.io/badge/Support-Plan-orange) |
+
 ## ⭐Features:
 
 ## 🚀 Quick Started
