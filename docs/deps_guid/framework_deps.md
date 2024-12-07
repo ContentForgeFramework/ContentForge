@@ -1,0 +1,20 @@
+# Dependencies
+| package                                | version | range                                                            | description                                                                                                                                                 |
+|----------------------------------------|---------|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Python](https://www.python.org/)      | 3.13.0  | ![Build status](https://img.shields.io/badge/Range-venv-yellow)  | Python is a programming language that lets you work quickly and integrate systems more effectively.                                                         |
+
+
+
+# Dev-dependencies
+| package                                      | version  | range                                                           | description                                                                                                                               |
+|----------------------------------------------|----------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| [Pip](https://pypi.org/project/pip/)         | ^24.3.1  | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | The PyPA recommended tool for installing Python packages.                                                                                 |
+| [pipx](https://pypi.org/project/pipx/)       | ^1.7.1   | ![Build status](https://img.shields.io/badge/Range-global-red)  | pipx is a tool to help you install and run end-user applications written in Python.                                                       |
+| [Poetry](https://python-poetry.org/)         | ^1.8.4   | ![Build status](https://img.shields.io/badge/Range-global-red)  | Poetry is a tool for dependency management and packaging in Python.                                                                       |
+| [black](https://pypi.org/project/black/)     | ^24.10.0 | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | The uncompromising Python code formatter.                                                                                                 |
+| [click](https://pypi.org/project/click/)     | ^8.1.7   | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | Composable command line interface toolkit.                                                                                                |
+| [PyYAML](https://pypi.org/project/PyYAML/)   | ^6.0     | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | YAML parser and emitter for Python.                                                                                                       |
+| [pytest](https://pypi.org/project/pytest/)   | ^7.0.1   | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries. |
+| [toml](https://pypi.org/project/toml/)       | ^0.10.2  | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | Python Library for Tom's Obvious, Minimal Language.                                                                                       |
+| [tomli](https://pypi.org/project/tomli/)     | ^1.1.0   | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | A TOML parser and serializer.                                                                                                             |
+| [Pyside6](https://pypi.org/project/PySide6/) | ^6.2.2   | ![Build status](https://img.shields.io/badge/Range-venv-yellow) | The PySide project provides LGPL-licensed Python bindings for the Qt cross-platform application and UI framework.                         |
