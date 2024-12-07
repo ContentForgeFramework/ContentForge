@@ -1,0 +1,17 @@
+{
+    "name" : "contentforge",
+    "version" : "0.0.1",
+    "description" : "Management files for embedding dependencies across multiple Python versions in the ContentForge framework.",
+    "root" : "./vendor",
+    "scripts" : {
+        "add" : "",
+        "remove" : "",
+        "upgrade" : "",
+        "list" : "",
+        "build" : "",
+        "dev-build" : "",
+        "test" : ""
+    },
+    "python-packages" : {
+    }
+}
