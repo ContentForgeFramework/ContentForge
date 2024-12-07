@@ -127,6 +127,15 @@
                 "dependencies": null,
                 "dev-dependencies": null
             }
+        },
+        "substance-designer": {
+            "3.9.*": {
+                "version": [
+                    ">=9.1"
+                ],
+                "dependencies": null,
+                "dev-dependencies": null
+            }
         }
     }
 }
