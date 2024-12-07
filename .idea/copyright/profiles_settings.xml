@@ -1,5 +1,8 @@
 <component name="CopyrightManager">
-  <settings>
+  <settings default="ContentForge">
+    <module2copyright>
+      <element module="Project Files" copyright="ContentForge" />
+    </module2copyright>
     <LanguageOptions name="Python">
       <option name="fileTypeOverride" value="3" />
       <option name="relativeBefore" value="false" />

@@ -18,3 +18,4 @@
 | 0.0.15  | update ./README.md                      | Carl Chen | 2024-12-05 |
 | 0.0.16  | update docs/dev_guide/change_history.md | Carl Chen | 2024-12-05 |
 | 0.0.17  | update ./README.md                      | Carl Chen | 2024-12-05 |
+| 0.0.18  | create initial vendor/contentforge      | Carl Chen | 2024-12-05 |
