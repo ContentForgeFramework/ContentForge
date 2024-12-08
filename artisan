@@ -48,6 +48,8 @@ import pkgutil
 import sys
 
 import click
+import toml
+from pathlib import Path
 
 # 将 utils 路径加入 sys.path
 current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取当前文件目录
@@ -58,8 +60,10 @@ sys.path.insert(0, os.path.join(current_dir, 'vendor'))
 from contentforge.utils import command
 
 
-@click.group()
-def cli():
+@click.group(invoke_without_command=True)
+@click.option('--version', '-v', is_flag=True, help="Get the contentforge framework version")
+@click.pass_context
+def cli(ctx, version):
     """
     ContentForge 命令行工具
 
@@ -68,7 +72,11 @@ def cli():
     示例用法：
         python artisan <command> [options]
     """
-    pass
+    if version:
+        from contentforge.utils.command import version
+        msg = version.get_version()
+        click.echo(msg)
+        ctx.exit()  # 输出版本信息后立即退出
 
 
 def load_commands():
