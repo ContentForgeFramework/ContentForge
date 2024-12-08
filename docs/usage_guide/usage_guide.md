@@ -29,6 +29,7 @@ For example, to install to ```D:\Global\Location``` on Windows PowerShell, use t
 $env:PIPX_HOME="D:\Global\Location\env"
 $env:PIPX_BIN_DIR="D:\Global\Location\bin"
 ```
+
 > Tips:
 > The commands must be run every time you open a new terminal session before installed success poetry.
 
@@ -42,14 +43,17 @@ pipx ensurepath
 Please ensure that the pipx path is correctly added to the PATH environment variable.
 
 Now, you can install Poetry using pipx:
+
 ```bash
 pipx install poetry
 ```
+
 After installing Poetry, check the Poetry version with:
 
 ```bash
 poetry --version
 ```
+
 Good Job! You can install [ContentForge](../../README.md) framework now.
 
 ## Install ContentForge
@@ -65,16 +69,21 @@ curl -L -o ContentForge.zip https://github.com/ContentForgeFramework/ContentForg
 Now, navigate to the ContentForge directory.
 
 Please rebuild the git repository by running the following command:
+
 ```bash
 git init
 git add -A
 git commit -m "Initial commit"
 ```
+
 and install the framework dependencies using the following command:
+
 ```bash
 poetry install
 ```
+
 Dependencies will be installed in the venv directory. Use the following command to check the framework version:
+
 ```bash
 # installed py launcher
 py artisan -v
@@ -85,13 +94,19 @@ python artisan -v
 # Output
 version: 0.1.0
 ```
+
 If you need help with the CLI, use the following command:
+
 ```bash
 py artisan --help
 ```
 
-
 ## Create a new project
 
+## Available commands
+
+Check the [Available commands](../usage_guide/cli_usage.md) for a complete list of commands that can be used with the CLI.
+
 ## Q&A
+
 Please visit the [FAQ](./FAQ.md) page for more information.

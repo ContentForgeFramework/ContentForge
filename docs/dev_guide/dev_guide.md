@@ -8,6 +8,11 @@ It will cover the following topics:
 - [Change History](./change_history.md) - About the change history.
 
 ## Code Style
-We use the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for Python code. 
+
+We use the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for Python code.  
 Please make sure to follow it when contributing to the project.
 
+## Framework CLI
+
+The Framework CLI is a command-line interface that provides a set of commands to assist in project management.  
+You can find the CLI documentation [here](./cli_dev.md).
