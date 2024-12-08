@@ -62,8 +62,6 @@ You can also download the repository using the following command:
 curl -L -o ContentForge.zip https://github.com/ContentForgeFramework/ContentForge/archive/refs/heads/main.zip
 ```
 
-After downloading the zip file, extract it to your project directory.
-
 Now, navigate to the ContentForge directory.
 
 Please rebuild the git repository by running the following command:
@@ -76,6 +74,22 @@ and install the framework dependencies using the following command:
 ```bash
 poetry install
 ```
+Dependencies will be installed in the venv directory. Use the following command to check the framework version:
+```bash
+# installed py launcher
+py artisan -v
+
+# or
+python artisan -v
+
+# Output
+version: 0.1.0
+```
+If you need help with the CLI, use the following command:
+```bash
+py artisan --help
+```
+
 
 ## Create a new project
 

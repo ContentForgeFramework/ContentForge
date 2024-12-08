@@ -22,3 +22,4 @@
 | 0.0.19  | create initial vendor/contentforge/utils/command    | Carl Chen | 2024-12-05 |
 | 0.0.20  | create vendor/contentforge/utils/command/version.py | Carl Chen | 2024-12-05 |
 | 0.0.21  | update artisan contentforge import                  | Carl Chen | 2024-12-05 |
+| 0.0.22  | docs/usage_guide/usage_guide.md                     | Carl Chen | 2024-12-05 |
