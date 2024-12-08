@@ -48,12 +48,11 @@ import pkgutil
 import sys
 
 import click
-import toml
-from pathlib import Path
 
-# 将 utils 路径加入 sys.path
-current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取当前文件目录
-utils_path = os.path.join(current_dir, 'vendor', 'contentforge', 'utils')
+# 获取当前文件目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 将 vendor 目录添加到 sys.path 中
 sys.path.insert(0, os.path.join(current_dir, 'vendor'))
 
 # 导入 contentforge.utils 命令模块
@@ -74,6 +73,7 @@ def cli(ctx, version):
     """
     if version:
         from contentforge.utils.command import version
+
         msg = version.get_version()
         click.echo(msg)
         ctx.exit()  # 输出版本信息后立即退出
