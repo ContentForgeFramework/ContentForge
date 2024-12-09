@@ -24,3 +24,4 @@
 | 0.0.21  | update artisan contentforge import                  | Carl Chen | 2024-12-05 |
 | 0.0.22  | update docs/usage_guide/usage_guide.md              | Carl Chen | 2024-12-05 |
 | 0.0.23  | create docs/dev_guide/cli_dev.md                    | Carl Chen | 2024-12-05 |
+| 0.0.24  | create slink for artisan.py                         | Carl Chen | 2024-12-05 |
