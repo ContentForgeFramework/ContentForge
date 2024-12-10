@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # ====================================================================================================================================================
 # 
-# 该文件用于提取项目版本信息，特别是从 pyproject.toml 文件中读取版本号。
+# This file is a utility script that extracts version information from the pyproject.toml file.
 #
-# 该文件通过解析 pyproject.toml 中的内容，提取版本信息，便于在项目中动态管理和引用版本号。
+# This script is used to extract the version information from the pyproject.toml file in the project root directory.
 # 
 # @filename   version.py
 # @path       vendor\contentforge\utils\command\version.py
@@ -46,31 +46,33 @@ from pathlib import Path
 
 def get_version():
     """
-    提取项目版本号。
+    Extracts version
 
-    从项目根目录中的 pyproject.toml 文件中读取版本号。如果文件不存在或解析失败，将返回适当的错误信息。
+    This function reads the version information from the pyproject.toml file in the project root directory.
 
-    :return: str 包含版本号信息的字符串，如果无法读取则返回错误提示。
+    :return: str - The version information, or an error message if the file is not found.
     """
-    # 获取项目根目录
+    # get the project root directory
     project_root = Path(__file__).resolve().parents[4]
     pyproject_path = os.path.join(project_root, 'pyproject.toml')
     
-    # 输出路径以供debug
+    # output the path for debugging
     # print(pyproject_path)
     
     try:
-        # 使用 toml 库加载 pyproject.toml
+        # use toml to load the pyproject.toml file
         if os.path.exists(pyproject_path):
+            
             data = toml.load(pyproject_path)
-            # 从工具节点中获取 Poetry 的版本信息
+            
+            # extract the version information from tool.poetry
             project_version = data.get('tool', {}).get('poetry', {}).get('version', 'Unknown')
             return f"version: {project_version}"
         else:
-            # 如果文件不存在，返回提示
+            # if the file is not found, return an error message
             return "pyproject.toml not found, version is unknown!"
     except Exception as e:
-        # 捕获异常并返回错误信息
+        # if an error occurs, return an error message
         return f"An error occurred: {e}"
         
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ====================================================================================================================================================
-# 
-# 此文件是 ContentForge 项目中 command 包的初始化模块
 #
-# 该文件可以用于在包初始化时执行必要的设置操作，例如添加路径、加载环境变量等。当前实现中并未定义特定逻辑。
+# This file is part of the ContentForge project.
+#
+# This file defines the command-line interface (CLI) entry point and loads related commands for the ContentForge project.
 #
 # @filename   __init__.py
 # @path       vendor\contentforge\utils\command\__init__.py
@@ -19,6 +19,7 @@
 # @version    git
 # @record     2024/12/8 1:18 <Carl Chen> Create file.
 #             2024/12/8 1:18 <Carl Chen> Update header comment.
+#             2024/12/10 21:39 <Carl Chen>  add configuration class and pass_configurations decorator
 #             CURRENT_USER_NAME description
 #
 # @license    http://www.opensource.org/licenses/mit-license.html  MIT License
@@ -39,13 +40,32 @@ from __future__ import print_function, unicode_literals
 # =============================================================================================================
 # Standard Python Imports
 # =============================================================================================================
-import os
-import sys
+import click
+
+
+class Configuration(object):
+    """
+    store the configuration information
+    """
+    
+    def __init__(self, debug, *args, **kwargs):
+        """
+        Initial the configuration object
+        :param debug: debug flag, open debug mode if True
+        :param args: positional arguments
+        :param kwargs: keyword arguments
+        """
+        self.debug = debug
+        self.args = args
+        self.kwargs = kwargs
+
+
+# pass the configuration object to the command
+pass_configurations = click.make_pass_decorator(Configuration, ensure=True)
 
 # =============================================================================================================
 # Script Execution
 # =============================================================================================================
 if __name__ == '__main__':
-    # 当前脚本主要用于初始化 ContentForge command 包的运行环境。
-    # 尚未定义具体逻辑，未来可在此扩展初始化操作。
+    # Initialize the command package and load the commands
     pass

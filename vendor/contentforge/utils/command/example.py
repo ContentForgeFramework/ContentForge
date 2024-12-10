@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 # ====================================================================================================================================================
 # 
-# 此文件是一个示例脚本，展示如何定义一个简单的命令行工具
+# This file is a sample example
 #
-# 该文件包含一个使用 Click 库实现的命令行工具示例，能够通过命令行与用户交互并输出问候语。
+# This file is a sample example of a command-line tool implemented using the Click library,
+# which can interact with users through the command line and output greetings.
 #
 # @filename   example.py
 # @path       vendor\contentforge\utils\command\example.py
@@ -17,8 +18,9 @@
 # @time       2024/12/8 01:03
 #
 # @version    git
-# @record     2024/12/8 1:46 <Carl Chen> Create file.
-#             2024/12/8 1:46 <Carl Chen> Update header comment.
+# @record     2024/12/08 01:46 <Carl Chen> Create file.
+#             2024/12/08 01:46 <Carl Chen> Update header comment.
+#             2024/12/10 21:54 <Carl Chen> add debug mode
 #             CURRENT_USER_NAME description
 #
 # @license    http://www.opensource.org/licenses/mit-license.html  MIT License
@@ -41,23 +43,33 @@ from __future__ import print_function, unicode_literals
 # =============================================================================================================
 import click
 
+from contentforge.utils.command import pass_configurations
+
 
 @click.command()
 @click.option('--name', default='world', help='Name to greet')
-def cli(name):
+@pass_configurations
+def cli(configurations, name):
     """
-    一个简单的示例命令行工具。
+    A sample command-line tool that outputs a greeting message.
 
-    该工具接收一个可选参数 `--name`，用于生成问候语并在终端中输出。
+    This tool allows users to interact through the command line and outputs a greeting message.
+    
+    Args: \n
+        configurations (Configuration): The configuration object. It may include a debug mode flag.\n
+        name (str): The name of the person to greet.
 
-    参数:
-        name (str): 要问候的名字，默认为 'world'。
+    Example Usage:\n
+        py artisan example --name Alice
 
-    示例用法:
-        python example.py --name Alice
-    输出:
+    Example Output:\n
         Hello, Alice!
     """
+    debug = getattr(configurations, 'debug', False)
+    
+    if debug:
+        click.secho("Example command is running in debug mode.", fg='yellow')
+        
     click.echo(f"Hello, {name}!")
 
 
@@ -65,5 +77,5 @@ def cli(name):
 # Script Execution
 # =============================================================================================================
 if __name__ == '__main__':
-    # 如果直接运行该脚本，不执行命令，仅作为模块存在时供外部调用。
+    # Initialize this file and load the command
     pass

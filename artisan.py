@@ -19,9 +19,11 @@
 # @time       2024/12/8 00:57
 #
 # @version    git
-# @record     2024/12/8 0:57 <Carl Chen> Create file.
-#             2024/12/8 0:57 <Carl Chen> Update header comment.
+# @record     2024/12/08 00:57 <Carl Chen> Create file.
+#             2024/12/08 00:57 <Carl Chen> Update header comment.
+#             2024/12/10 21:41 <Carl Chen> add debug mode and version command
 #             CURRENT_USER_NAME description
+#
 #
 # @license    http://www.opensource.org/licenses/mit-license.html  MIT License
 #
@@ -60,8 +62,9 @@ from contentforge.utils import command
 
 @click.group(invoke_without_command=True)
 @click.option('--version', '-v', is_flag=True, help="Get the contentforge framework version")
+@click.option('--debug', is_flag=True, help="Enable debug mode")
 @click.pass_context
-def cli(ctx, version):
+def cli(ctx, version, debug):
     """
     ContentForge Command-Line Tool
 
@@ -70,6 +73,8 @@ def cli(ctx, version):
     Example usage:
         python artisan <command> [options]
     """
+    # set the debug mode
+    ctx.obj = command.Configuration(debug)
 
     if version:
         # Import the version command
