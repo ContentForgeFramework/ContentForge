@@ -26,3 +26,4 @@
 | 0.0.23  | create docs/dev_guide/cli_dev.md                    | Carl Chen | 2024-12-09 |
 | 0.0.24  | create slink for artisan.py                         | Carl Chen | 2024-12-10 |
 | 0.0.25  | add debug mode to cli                               | Carl Chen | 2024-12-10 |
+| 0.0.26  | add env --init to cli                               | Carl Chen | 2024-12-10 |

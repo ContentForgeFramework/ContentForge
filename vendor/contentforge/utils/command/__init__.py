@@ -51,7 +51,7 @@ class Configuration(object):
     def __init__(self, debug, *args, **kwargs):
         """
         Initial the configuration object
-        :param debug: debug flag, open debug mode if True
+        :param debug: (bool): debug flag, open debug mode if True
         :param args: positional arguments
         :param kwargs: keyword arguments
         """

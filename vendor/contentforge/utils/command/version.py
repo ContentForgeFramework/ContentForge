@@ -50,7 +50,7 @@ def get_version():
 
     This function reads the version information from the pyproject.toml file in the project root directory.
 
-    :return: str - The version information, or an error message if the file is not found.
+    :return: (str) - The version information, or an error message if the file is not found.
     """
     # get the project root directory
     project_root = Path(__file__).resolve().parents[4]

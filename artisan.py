@@ -69,9 +69,13 @@ def cli(ctx, version, debug):
     ContentForge Command-Line Tool
 
     This tool is used to execute various commands in the ContentForge project.
-
+    
     Example usage:
         python artisan <command> [options]
+        
+    :param ctx: (object): Click context object.
+    :param version: (bool): Get the contentforge framework version.
+    :param debug: (bool): Enable debug mode.
     """
     # set the debug mode
     ctx.obj = command.Configuration(debug)

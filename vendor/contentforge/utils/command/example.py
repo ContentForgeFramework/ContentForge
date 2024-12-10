@@ -47,7 +47,7 @@ from contentforge.utils.command import pass_configurations
 
 
 @click.command()
-@click.option('--name', default='world', help='Name to greet')
+@click.option('--name', '-n', default='world', help='Name to greet')
 @pass_configurations
 def cli(configurations, name):
     """
@@ -55,15 +55,14 @@ def cli(configurations, name):
 
     This tool allows users to interact through the command line and outputs a greeting message.
     
-    Args: \n
-        configurations (Configuration): The configuration object. It may include a debug mode flag.\n
-        name (str): The name of the person to greet.
-
-    Example Usage:\n
+    Example Usage:
         py artisan example --name Alice
 
-    Example Output:\n
+    Example Output:
         Hello, Alice!
+        \n
+    :param configurations:  (Configuration): The configuration object. It may include a debug mode flag.\n
+    :param name:  (str): The name of the person to greet.\n
     """
     debug = getattr(configurations, 'debug', False)
     
