@@ -27,3 +27,4 @@
 | 0.0.24  | create slink for artisan.py                         | Carl Chen | 2024-12-10 |
 | 0.0.25  | add debug mode to cli                               | Carl Chen | 2024-12-10 |
 | 0.0.26  | add env --init to cli                               | Carl Chen | 2024-12-10 |
+| 0.0.27  | add .env.example file                               | Carl Chen | 2024-12-10 |
