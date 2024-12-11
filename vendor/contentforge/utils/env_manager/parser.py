@@ -37,11 +37,62 @@
 # ====================================================================================================================================================
 from __future__ import print_function, unicode_literals
 
+import logging
+
 # =============================================================================================================
 # Standard Python Imports
 # =============================================================================================================
-import os
-import sys
+logging.basicConfig(level=logging.INFO)
+
+
+def parse_value(value):
+    """
+    Parse a single value according to the defined rules.
+
+    :param value: (str) A single value from the .env file.
+    :return: (str | list) Cleaned value or list of values if commas are present.
+    """
+    if ',' in value:
+        return [' '.join(v.strip().split()) for v in value.split(',')]
+
+    return ' '.join(value.split()) if value else ""
+
+
+def parse_file(data):
+    """
+    Parse the entire .env file and return a cleaned dictionary.
+    
+    :param data: (dict) The raw data from the .env file.
+    
+    :return: (dict | None) The cleaned environment configuration.
+    
+    """
+    if not isinstance(data, dict):
+        logging.error(f"Invalid data type: {type(data)}")
+        return None
+        
+    return {k: parse_value(v) for k, v in data.items()}
+
+
+def get_parse_value(key, data):
+    """
+    Get a parsed value from the environment configuration.
+
+    :param key: (str) The key to retrieve from the environment configuration.
+    :param data: (dict) The raw data from the .env file.
+    
+    :return: (str | list | None) The parsed value or list of values if commas are present.
+    """
+    if not isinstance(data, dict):
+        logging.error(f"Invalid data type: {type(data)}")
+        return None
+        
+    value = data.get(key)
+    if value is None:
+        logging.warning(f"Key '{key}' not found or has no value.")
+        return None
+    return parse_value(value)
+
 
 # =============================================================================================================
 # Script Execution

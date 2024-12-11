@@ -29,3 +29,4 @@
 | 0.0.26  | add env --init to cli                                                                   | Carl Chen | 2024-12-10 |
 | 0.0.27  | add .env.example file                                                                   | Carl Chen | 2024-12-10 |
 | 0.0.28  | create vendor/contentforge/utils/env_manager package and dotenv pkg to dev dependencies | Carl Chen | 2024-12-11 |
+| 0.0.29  | add env file method                                                                     | Carl Chen | 2024-12-11 |

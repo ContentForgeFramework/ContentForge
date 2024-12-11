@@ -41,7 +41,40 @@ from __future__ import print_function, unicode_literals
 # Standard Python Imports
 # =============================================================================================================
 import os
-import sys
+import logging
+from pathlib import Path
+
+from dotenv import dotenv_values
+
+logging.basicConfig(level=logging.INFO)
+_project_root = Path(__file__).resolve().parents[4]
+_project_path = os.path.join(_project_root, '.env')
+
+
+def load_env():
+    """
+    Load Environment
+
+    This function reads the environment configuration from the .env file in the project root directory.
+
+    :return: (dict) - The environment configuration, or an error message if the file is not found.
+    """
+    # output the path for debugging
+    # print(_pyproject_path)
+    
+    if not os.path.exists(_project_path):
+        logging.error(f"File {_project_path} not found or inaccessible.")
+        return None
+    
+    # use dotenv to load the .env file
+    try:
+        env_config = dotenv_values(_project_path)
+        return env_config
+    
+    except Exception as e:
+        logging.error(f"Error loading .env file: {e}")
+        return None
+
 
 # =============================================================================================================
 # Script Execution

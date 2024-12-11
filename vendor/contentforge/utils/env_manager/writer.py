@@ -37,11 +37,106 @@
 # ====================================================================================================================================================
 from __future__ import print_function, unicode_literals
 
+
 # =============================================================================================================
 # Standard Python Imports
 # =============================================================================================================
+import logging
 import os
-import sys
+
+from pathlib import Path
+from dotenv import dotenv_values, set_key
+
+# set logging level
+logging.basicConfig(level=logging.INFO)
+
+# get the project root directory
+_project_root = Path(__file__).resolve().parents[4]
+_project_path = os.path.join(_project_root, '.env')
+
+
+def write_key_value(key, value=None):
+    """
+    Write Environment Configuration
+
+    This function writes or updates the environment configuration to the .env file. If `value` is `None`,
+    the key will be written with an empty value.
+    
+    :param key: (str) - The key to write to the configuration file.
+    :param value: (str | None) - The value to write to the configuration file. If None, the key will be written with an empty value.
+
+
+    :return: (bool) - True if the operation was successful (key written or deleted).
+                      False if the operation failed or the key was not found (in delete_key).
+
+    """
+    if not key:
+        logging.error("The 'key' must be provided.")
+        return False
+    
+    try:
+        set_key(_project_path, key, value)
+        return True
+    
+    except FileNotFoundError as file_not_found_err:
+        logging.error(f'Error writing configuration: {file_not_found_err}')
+        return False
+    
+    except PermissionError as permission_err:
+        logging.error(f'Error writing configuration: {permission_err}')
+        return False
+    
+    except IOError as io_err:
+        logging.error(f'Error writing configuration: {io_err}')
+        return False
+    
+    except Exception as e:
+        logging.error(f'Error writing configuration: {e}')
+        return False
+
+
+def delete_key(key):
+    """
+    Delete Environment
+
+    This function deletes the environment configuration from the .env file in the project root directory.
+    
+    :param key: (str) - The key to delete from the configuration file.
+
+    :return: (bool) - True if the configuration was successfully deleted, False otherwise.
+    """
+    
+    try:
+        env_data = dotenv_values(_project_path)
+        
+        if key in env_data:
+            env_data.pop(key)
+            
+            with open(_project_path, 'w') as file:
+                for k, v in env_data.items():
+                    file.write(f'{k}={v}\n')
+            logging.info(f"Key '{key}' successfully deleted.")
+            return True
+        else:
+            logging.warning(f"Key '{key}' not found in the .env file.")
+            return False
+    
+    except FileNotFoundError as file_not_found_err:
+        logging.error(f'Error writing configuration: {file_not_found_err}')
+        return False
+    
+    except PermissionError as permission_err:
+        logging.error(f'Error writing configuration: {permission_err}')
+        return False
+    
+    except IOError as io_err:
+        logging.error(f'Error writing configuration: {io_err}')
+        return False
+    
+    except Exception as e:
+        logging.error(f'Error writing configuration: {e}')
+        return False
+
 
 # =============================================================================================================
 # Script Execution
