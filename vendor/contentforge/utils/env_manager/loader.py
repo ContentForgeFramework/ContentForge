@@ -46,12 +46,15 @@ from pathlib import Path
 
 from dotenv import dotenv_values
 
+# Set up logging
 logging.basicConfig(level=logging.INFO)
+
+# get the project root directory
 _project_root = Path(__file__).resolve().parents[4]
 _project_path = os.path.join(_project_root, '.env')
 
 
-def load_env():
+def load_env(path=_project_path):
     """
     Load Environment
 
@@ -62,13 +65,13 @@ def load_env():
     # output the path for debugging
     # print(_pyproject_path)
     
-    if not os.path.exists(_project_path):
-        logging.error(f"File {_project_path} not found or inaccessible.")
+    if not os.path.exists(path):
+        logging.error(f"File {path} not found or inaccessible.")
         return None
     
     # use dotenv to load the .env file
     try:
-        env_config = dotenv_values(_project_path)
+        env_config = dotenv_values(path)
         return env_config
     
     except Exception as e:
