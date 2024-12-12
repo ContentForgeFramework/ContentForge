@@ -6,3 +6,6 @@
 | --debug  |             |              | Enable debug mode.                          |
 | example  | --name      | -n           | An example command.                         |
 | env      | --init      | -i           | Manage the project environment.             |
+|          | --delete    | -d           | Delete the environment file.                |
+|          | --clean     | -C           | Clean the environment.                      |
+|          | --validate  | -V           | Validate the environment file.              |
