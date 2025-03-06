@@ -1,0 +1,42 @@
+site_name: contentforge Documentation
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [vendor/contentforge]  # 源码路径
+          options:
+            show_source: true         # 显示源代码
+            show_root_heading: true
+  - gen-files
+  - literate-nav
+  - section-index
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Installation: guide/installation.md
+    - Quick Start: guide/quickstart.md
+  - API Reference: reference/
+  - Development:
+    - Contributing: development/contributing.md
+    - Architecture: development/architecture.md
