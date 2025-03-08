@@ -33,11 +33,14 @@ include = [
     "LICENSE",
 ]
 
-[tool.poetry.packages]
-includes = [
-    { include = "contentforge", from = "vendor" },
-    { include = "tests", format = "sdist" },
-    { include = "docs", format = "sdist" },
+packages = [
+    { include = "contentforge", from = "vendor" }
+]
+
+exclude = [
+    "tests/**/*",
+    "docs/build",
+    ".github/workflows/*"
 ]
 
 [tool.poetry.group.dev.dependencies]
