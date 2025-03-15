@@ -49,13 +49,16 @@ black = "^25.1.0"
 pyyaml = "^6.0.2"
 tomli = "^2.2.1"
 python-dotenv = "^1.0.1"
+pre-commit = ">=4.1.0,<5.0.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.5"
 pytest-cov = "^4.1.0"
+pre-commit = ">=4.1.0,<5.0.0"
 
 [tool.poetry.group.ui.dependencies]
 pyside6 = "^6.8.2"
+pre-commit = ">=4.1.0,<5.0.0"
 
 [tool.poetry.group.doc.dependencies]
 mkdocs = "^1.5.3"
@@ -70,6 +73,10 @@ mkdocs-section-index = "^0.3.8"
 mkdocs-glightbox = "^0.3.7"
 
 pymdown-extensions = "^10.7"
+
+
+[tool.poetry.group."dev,test,ui".dependencies]
+pre-commit = "^4.1.0"
 
 [tool.black]
 line-length = 120
