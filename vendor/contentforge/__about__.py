@@ -1,25 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # =============================================================================================================
+# 
+# Project metadata definition
 #
-# Package initialization module
+# Contains version information, authorship details, and license specifications
+# for the PROJECT_NAME software distribution.
 #
-# Defines package-level attributes and exposes public API interfaces.
-# Manages module discovery and version compatibility checks.
-#
-# @filename   __init__.py
-# @path       tests\__init__.py
-# @project    ContentForge
+# @filename   __about__.py
+# @path       RELATIVE_PATH
+# @project    PROJECT_NAME
 # @encoding   utf-8
 #
 # @product    PyCharm
-# @author     Content Forge
-# @email      mailto:ContentForge.org@hotmail.com
-# @time       2025/03/16 15:59
+# @author     USER
+# @email      EMAIL
+# @time       2025/03/16 15:56
 #
 # @version    git
-# @record     2025/03/16 16:07 <Content Forge> Create file.
-#             2025/03/16 16:07 <Content Forge> Update header comment.
+# @record     CURRENT_USER_NAME Create file.
+#             CURRENT_USER_NAME Update header comment.
 #             CURRENT_USER_NAME description
 #
 # @license    http://www.opensource.org/licenses/mit-license.html  MIT License
@@ -36,6 +36,8 @@
 #             For permissions, please contact ContentForge.org@hotmail.com.
 # =============================================================================================================
 from __future__ import print_function, unicode_literals
+
+__version__ = '0.0.1'
 
 # =============================================================================================================
 # Standard Python Imports

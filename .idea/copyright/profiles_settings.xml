@@ -8,7 +8,6 @@
       <option name="relativeBefore" value="false" />
       <option name="block" value="false" />
       <option name="separateAfter" value="true" />
-      <option name="lenAfter" value="150" />
       <option name="filler" value="=" />
     </LanguageOptions>
     <LanguageOptions name="__TEMPLATE__">
