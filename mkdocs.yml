@@ -1,0 +1,64 @@
+site_name: contentforge Documentation
+
+theme:
+    name: material
+    features:
+        - navigation.tabs
+        - navigation.sections
+        - navigation.expand
+        - search.suggest
+        - search.highlight
+    logo: assets/images/logo.png
+    palette:
+        -   scheme: default
+            primary: indigo
+            accent: indigo
+            toggle:
+                icon: material/brightness-7
+                name: Switch to dark mode
+        -   scheme: slate
+            primary: indigo
+            accent: indigo
+            toggle:
+                icon: material/brightness-4
+                name: Switch to light mode
+
+plugins:
+    - search
+    -   autorefs:
+            link_titles: "auto"
+    -   mkdocstrings:
+            handlers:
+                python:
+                    paths: [ vendor/contentforge ]
+                    options:
+                        show_source: true
+                        show_root_heading: true
+    -   gen-files:
+            scripts:
+                - vendor/gendoc/gen_ref_pages.py  # 生成API参考文档的脚本
+    - literate-nav
+    - section-index
+
+markdown_extensions:
+    -   pymdownx.highlight:
+            anchor_linenums: true
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - admonition
+    - footnotes
+    - attr_list
+    - md_in_html
+
+extra:
+    social:
+        -   icon: fontawesome/brands/github
+            link: https://github.com/ContentForgeFramework/contentforge
+            name: contentforge on GitHub
+
+# 添加版权信息
+copyright: Copyright &copy; 2025 Content Forge
+
+# 添加仓库链接
+repo_url: https://github.com/ContentForgeFramework/contentforge
+repo_name: contentforge

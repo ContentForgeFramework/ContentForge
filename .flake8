@@ -1,6 +1,6 @@
 [flake8]
 max-line-length = 120
-ignore = D100,D104,D400
+ignore = D100,D104,D400,W503,D401
 exclude =
     docs/,
     .git,

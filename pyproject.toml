@@ -54,7 +54,7 @@ pyside6 = "^6.8.2"
 [tool.poetry.group.doc.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.5.9"
-mkdocstrings = "^0.24.0"
+mkdocstrings = { extras = ["python"], version = "^0.29.0" }
 mkdocstrings-python = "^1.8.0"
 
 mike = "^2.0.0"
@@ -64,7 +64,8 @@ mkdocs-section-index = "^0.3.8"
 mkdocs-glightbox = "^0.3.7"
 
 pymdown-extensions = "^10.7"
-
+mkdocs-autorefs = "^1.4.1"
+griffe = "^1.6.0"
 
 [tool.black]
 line-length = 120
@@ -88,11 +89,15 @@ combine_as_imports = true
 case_sensitive = true
 skip = ["docs"]
 
+[tool.mypy]
+# ignore_missing_imports = true
+"mkdocs_gen_files.*" = { ignore_missing_imports = true }
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = """
-    -vvv
+    -v
     --cov-report=term-missing
     --cov-report=html:coverage_html
     --cov-fail-under=100
