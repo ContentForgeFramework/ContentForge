@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # =============================================================================================================
-# 
+#
 # Project metadata definition
 #
 # Contains version information, authorship details, and license specifications

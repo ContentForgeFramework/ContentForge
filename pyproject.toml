@@ -6,12 +6,8 @@ readme = "README.md"
 requires-python = "~3.12"
 license = { text = "MIT" }
 keywords = ["dcc", "plugin-development", "content-tools"]
-authors = [
-    { name = "Content Forge", email = "ContentForge.org@hotmail.com" }
-]
-maintainers = [
-    { name = "Content Forge", email = "ContentForge.org@hotmail.com" }
-]
+authors = [{ name = "Content Forge", email = "ContentForge.org@hotmail.com" }]
+maintainers = [{ name = "Content Forge", email = "ContentForge.org@hotmail.com" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
@@ -20,9 +16,8 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "pre-commit (>=4.1.0,<5.0.0)"
+    "pre-commit (>=4.1.0,<5.0.0)",
 ]
-
 [project.urls]
 Homepage = "https://contentforge.org"
 Documentation = "https://github.com/ContentForgeFramework/contentforge#readme"
@@ -33,18 +28,15 @@ Issues = "https://github.com/ContentForgeFramework/contentforge/issues"
 include = [
     "LICENSE",
 ]
-
 packages = [
-    { include = "contentforge", from = "vendor" }
+    { include = "contentforge", from = "vendor" },
 ]
-
 exclude = [
     "tests/**/*",
     "docs/build",
     "build/**/*",
     ".github/workflows/*"
 ]
-
 [tool.poetry.group.dev.dependencies]
 click = "^8.1.8"
 black = "^25.1.0"
@@ -95,11 +87,6 @@ lines_between_types = 1
 combine_as_imports = true
 case_sensitive = true
 skip = ["docs"]
-
-[tool.flake8]
-max-line-length = 120
-ignore = "D100,D104"
-exclude = "docs/"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
