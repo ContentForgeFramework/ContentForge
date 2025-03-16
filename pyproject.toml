@@ -96,7 +96,7 @@ addopts = """
     --cov=contentforge
     --cov-report=term-missing
     --cov-report=html:coverage_html
-    --cov-fail-under=120
+    --cov-fail-under=100
     """
 
 [tool.poetry.scripts]
