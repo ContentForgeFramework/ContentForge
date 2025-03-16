@@ -1,0 +1,20 @@
+<component name="CopyrightManager">
+  <settings default="ContentForge">
+    <module2copyright>
+      <element module="Project Files" copyright="ContentForge" />
+    </module2copyright>
+    <LanguageOptions name="Python">
+      <option name="fileTypeOverride" value="3" />
+      <option name="relativeBefore" value="false" />
+      <option name="block" value="false" />
+      <option name="separateAfter" value="true" />
+      <option name="lenAfter" value="150" />
+      <option name="filler" value="=" />
+    </LanguageOptions>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="relativeBefore" value="false" />
+      <option name="separateAfter" value="true" />
+      <option name="filler" value="=" />
+    </LanguageOptions>
+  </settings>
+</component>
