@@ -82,8 +82,8 @@ force_grid_wrap = 0
 use_parentheses = true
 ensure_newline_before_comments = true
 indent = 4
-lines_after_imports = 1
-lines_between_types = 1
+lines_after_imports = 2
+lines_between_types = 2
 combine_as_imports = true
 case_sensitive = true
 skip = ["docs"]
@@ -92,8 +92,7 @@ skip = ["docs"]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = """
-    -v
-    --cov=contentforge
+    -vvv
     --cov-report=term-missing
     --cov-report=html:coverage_html
     --cov-fail-under=100

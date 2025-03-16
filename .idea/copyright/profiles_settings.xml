@@ -8,11 +8,13 @@
       <option name="relativeBefore" value="false" />
       <option name="block" value="false" />
       <option name="separateAfter" value="true" />
+      <option name="lenAfter" value="111" />
       <option name="filler" value="=" />
     </LanguageOptions>
     <LanguageOptions name="__TEMPLATE__">
       <option name="relativeBefore" value="false" />
       <option name="separateAfter" value="true" />
+      <option name="lenAfter" value="111" />
       <option name="filler" value="=" />
     </LanguageOptions>
   </settings>
